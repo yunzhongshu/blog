@@ -1,0 +1,13 @@
+html, body {
+    font-size: 62.5%;
+}
+
+body, button, input, textarea {
+    font-family:"微软雅黑", "Microsoft Yahei", SimSun, sans-serif;
+}
+
+body{
+    color:#333;
+    font-size: 1.4rem;
+}
+
