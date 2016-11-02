@@ -1,2 +1,4 @@
 baseurl: /blog
 timezone: Asia/Shanghai
+sass:
+    style: compressed
