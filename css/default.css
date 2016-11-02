@@ -11,6 +11,15 @@ body{
     font-size: 1.4rem;
 }
 
+.article-author, .article-date{
+    float: right;
+    margin-right: 1rem;
+}
+
+.sub-title {
+    height: 2rem;
+}
+
 
 
 
