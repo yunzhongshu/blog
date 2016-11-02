@@ -1,0 +1,55 @@
+a,
+a:hover,
+a:active,
+a:visited{
+  color: $brand-color
+}
+
+
+.page-header {
+
+  height: 60px;
+
+  h1 {
+    float: left;
+  }
+
+  .page-nav{
+    margin-top: 20px;
+    float: right;
+    width: 40%;
+
+    .menu-list{
+
+
+      list-style: none;
+
+      li{
+        float: left;
+        padding: 0 20px;
+        border-right: 2px solid $grey-color;
+      }
+
+    }
+
+  }
+}
+
+
+
+.article-author, .article-date{
+  float: right;
+  margin-right: 20px;
+  color: $grey-color;
+}
+
+.sub-title {
+  height: 20px;
+}
+
+.glyphicon{
+  margin-right: 5px;
+}
+
+
+

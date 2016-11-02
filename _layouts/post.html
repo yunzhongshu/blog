@@ -1,16 +1,14 @@
-{% include header.html %}
+{% include head.html %}
 <body>
     <div class="container">
-        <div class="page-header">
-            <h1>最美的景 <small>一朵云的技术博客</small></h1>
-        </div>
+        {% include header.html %}
 
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h2>{{ page.title }}</h2>
                 <div class="sub-title">
-                    <span class="article-author">By 一朵云</span>
-                    <span class="article-date">{{site.time | date_to_string}}</span>
+                    <span class="article-author"><span class="glyphicon glyphicon-user"></span> 一朵云</span>
+                    <span class="article-date"><span class="glyphicon glyphicon-time"></span><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%Y-%m-%d" }}</time></span>
                 </div>
             </div>
             <div class="panel-body">

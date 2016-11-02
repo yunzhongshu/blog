@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>nginx的网站跨域设置</title>
+    <meta name="description" content="web应用通常会碰到跨域的问题，特别是在将字体文件放在另一个域名下(cdn缓存)的时候会出现无法访问的问题，浏览器会报如下错误警告：Font from origin 'http://cdn.xxxx.com' has been blocked from loading by Cross-Origin Resour...">
+    <link rel="shortcut icon" href="/blog/images/scenery.ico">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/blog/css/main.css">
+    <link rel="canonical" href="http://localhost:4000/blog/2016/10/30/nginx%E7%9A%84%E7%BD%91%E7%AB%99%E8%B7%A8%E5%9F%9F%E8%AE%BE%E7%BD%AE.html">
+    <link rel="alternate" type="application/rss+xml" title="" href="http://localhost:4000/blog/feed.xml">
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+    <h1>最美的景 <small>一朵云的技术博客</small></h1>
+    <nav class="page-nav">
+        <ul class="menu-list">
+            <li>
+                <a href="/blog/index.html">Home</a>
+            </li>
+            <li>
+                <a href="/blog/about.html">About</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2>nginx的网站跨域设置</h2>
+                <div class="sub-title">
+                    <span class="article-author"><span class="glyphicon glyphicon-user"></span> 一朵云</span>
+                    <span class="article-date"><span class="glyphicon glyphicon-time"></span><time datetime="2016-10-30T00:00:00+08:00" itemprop="datePublished">2016-10-30</time></span>
+                </div>
+            </div>
+            <div class="panel-body">
+                <p class="article">
+                    <p>web应用通常会碰到跨域的问题，特别是在将字体文件放在另一个域名下(cdn缓存)的时候会出现无法访问的问题，浏览器会报如下错误警告：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Font from origin 'http://cdn.xxxx.com' has been blocked from loading by Cross-Origin Resource   Sharing policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'http://www.xxxx.com' is therefore not allowed access.
+</code></pre>
+</div>
+
+<p>意思是说 http://www.xxxx.com 不被 http://cdn.xxxx.com 服务跨域允许,需要在 nginx 的 cdn.xxxx.com服务的配置中加上跨域允许的配置：</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>add_header Access-Control-Allow-Origin http://www.xxxx.com;
+add_header Access-Control-Allow-Headers Origin,X-Requested-With,Content-    Type,Accept;
+add_header Access-Control-Allow-Methods POST,GET;
+add_header Access-Control-Allow-Credentials true;
+</code></pre>
+</div>
+
+<p>重启nginx就能解决这个问题。</p>
+
+                </p>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+</body>
+</html>
