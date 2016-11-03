@@ -3,10 +3,10 @@
   <channel>
     <title></title>
     <description></description>
-    <link>http://localhost:4000/blog/</link>
-    <atom:link href="http://localhost:4000/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 02 Nov 2016 22:24:22 +0800</pubDate>
-    <lastBuildDate>Wed, 02 Nov 2016 22:24:22 +0800</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 03 Nov 2016 20:27:39 +0800</pubDate>
+    <lastBuildDate>Thu, 03 Nov 2016 20:27:39 +0800</lastBuildDate>
     <generator>Jekyll v3.3.0</generator>
     
       <item>
@@ -29,8 +29,8 @@ add_header Access-Control-Allow-Credentials true;
 &lt;p&gt;重启nginx就能解决这个问题。&lt;/p&gt;
 </description>
         <pubDate>Sun, 30 Oct 2016 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/blog/2016/10/30/nginx%E7%9A%84%E7%BD%91%E7%AB%99%E8%B7%A8%E5%9F%9F%E8%AE%BE%E7%BD%AE.html</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/2016/10/30/nginx%E7%9A%84%E7%BD%91%E7%AB%99%E8%B7%A8%E5%9F%9F%E8%AE%BE%E7%BD%AE.html</guid>
+        <link>http://localhost:4000/2016/10/30/nginx%E7%9A%84%E7%BD%91%E7%AB%99%E8%B7%A8%E5%9F%9F%E8%AE%BE%E7%BD%AE.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/10/30/nginx%E7%9A%84%E7%BD%91%E7%AB%99%E8%B7%A8%E5%9F%9F%E8%AE%BE%E7%BD%AE.html</guid>
         
         <category>nginx,跨域</category>
         
