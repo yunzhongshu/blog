@@ -8,7 +8,8 @@ title: 最美的景
 <ul class="post-list">
     {% for post in site.posts %}
     　　<li>
-            <time> {{ post.date | date: "%Y年%m月%d日" }} >> </time> <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
+            <time> {{ post.date | date: "%Y年%m月%d日" }} >> </time>
+            <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
             <span class="post-meta">&nbsp; by {{post.author}}</span>
         </li>
     {% endfor %}
