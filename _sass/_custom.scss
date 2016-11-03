@@ -42,14 +42,26 @@ time{
 
 
 
-.article-author, .article-date{
-  float: right;
-  margin-right: 20px;
-  color: $grey-color;
-}
+
 
 .sub-title {
   height: 20px;
+
+  .article-author, .article-date{
+    float: right;
+    margin-right: 20px;
+    color: $grey-color;
+  }
+
+  .tag-region {
+    float: left;
+    color: $grey-color-dark;
+
+    .tags{
+      margin-left: 20px;
+      color:$orange;
+    }
+  }
 }
 
 .glyphicon{

@@ -6,8 +6,8 @@
 </description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 03 Nov 2016 22:18:02 +0800</pubDate>
-    <lastBuildDate>Thu, 03 Nov 2016 22:18:02 +0800</lastBuildDate>
+    <pubDate>Thu, 03 Nov 2016 22:35:16 +0800</pubDate>
+    <lastBuildDate>Thu, 03 Nov 2016 22:35:16 +0800</lastBuildDate>
     <generator>Jekyll v3.3.0</generator>
     
       <item>
@@ -31,18 +31,19 @@ add_header Access-Control-Allow-Credentials true;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;　　重启nginx就能解决这个问题。
-　　以上配置是在请求的返回response的header中添加了&lt;/p&gt;
+&lt;p&gt;　　重启nginx就能解决这个问题。以上配置是在请求的返回response的header中添加了&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Access-Control-Allow-Origin http://www.xxxx.com;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Access-Control-Allow-Origin http://www.xxxx.com;//允许该域名被访问。
 
-允许该域名被访问。 也可以用
 
-Access-Control-Allow-Origin *;
+也可以允许所有域名访问
+
+
+Access-Control-Allow-Origin *;//允许所有域名访问该资源。
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;　　允许所有域名访问该资源。 &lt;br /&gt;
+&lt;p&gt;　　 &lt;br /&gt;
 　　另外附上所有跨域访问的条件图：
 &lt;img src=&quot;http://images.cnitblog.com/blog/451114/201310/16103043-5beb9c6503144f86b41569805be88eec.png&quot; /&gt;&lt;/p&gt;
 

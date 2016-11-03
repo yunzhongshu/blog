@@ -36,6 +36,7 @@
             <div class="panel-heading">
                 <h2>nginx的网站跨域设置</h2>
                 <div class="sub-title">
+                    <div class="tag-region">分类:<span class="tags">nginx,跨域</span></div>
                     <span class="article-author"><span class="glyphicon glyphicon-user"></span> 一朵云</span>
                     <span class="article-date"><span class="glyphicon glyphicon-time"></span><time datetime="2016-10-30T00:00:00+08:00" itemprop="datePublished">2016-10-30</time></span>
                 </div>
@@ -61,18 +62,19 @@ add_header Access-Control-Allow-Credentials true;
 </code></pre>
 </div>
 
-<p>　　重启nginx就能解决这个问题。
-　　以上配置是在请求的返回response的header中添加了</p>
+<p>　　重启nginx就能解决这个问题。以上配置是在请求的返回response的header中添加了</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>Access-Control-Allow-Origin http://www.xxxx.com;
+<div class="highlighter-rouge"><pre class="highlight"><code>Access-Control-Allow-Origin http://www.xxxx.com;//允许该域名被访问。
 
-允许该域名被访问。 也可以用
 
-Access-Control-Allow-Origin *;
+也可以允许所有域名访问
+
+
+Access-Control-Allow-Origin *;//允许所有域名访问该资源。
 </code></pre>
 </div>
 
-<p>　　允许所有域名访问该资源。 <br />
+<p>　　 <br />
 　　另外附上所有跨域访问的条件图：
 <img src="http://images.cnitblog.com/blog/451114/201310/16103043-5beb9c6503144f86b41569805be88eec.png" /></p>
 
