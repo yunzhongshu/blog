@@ -1,4 +1,14 @@
-baseurl:
+title: 一朵云的私人花园
+email: yunzhongshu_1@163.com
+description: > # this means to ignore newlines until "baseurl:"
+  一朵云的个人技术博客。
+baseurl: ""
+url: "http://zuimeidejing.cn" # the base hostname & protocol for your site
+github_username:  yunzhongshu
+
+# Build settings
+#markdown: kramdown
+
 timezone: Asia/Shanghai
 sass:
     style: compressed

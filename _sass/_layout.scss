@@ -132,13 +132,13 @@
 }
 
 .footer-col-2 {
-    width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-    width:         calc(20% - (#{$spacing-unit} / 2));
+    width: -webkit-calc(25% - (#{$spacing-unit} / 2));
+    width:         calc(25% - (#{$spacing-unit} / 2));
 }
 
 .footer-col-3 {
-    width: -webkit-calc(45% - (#{$spacing-unit} / 2));
-    width:         calc(45% - (#{$spacing-unit} / 2));
+    width: -webkit-calc(40% - (#{$spacing-unit} / 2));
+    width:         calc(40% - (#{$spacing-unit} / 2));
 }
 
 @include media-query($on-laptop) {
@@ -190,8 +190,8 @@
 }
 
 .post-link {
-    display: block;
-    font-size: 24px;
+    //display: block;
+    font-size: 22px;
 }
 
 
@@ -239,4 +239,10 @@
             font-size: 18px;
         }
     }
+}
+
+.blog-content{
+    min-height: 550px;
+    background-color: #ffffff;
+    padding: 10px 15px;
 }

@@ -5,10 +5,15 @@ a:visited{
   color: $brand-color
 }
 
+time{
+  color: $grey-color;
+}
+
 
 .page-header {
 
   height: 60px;
+  margin: 30px 0 15px;
 
   h1 {
     float: left;
@@ -51,5 +56,15 @@ a:visited{
   margin-right: 5px;
 }
 
+
+.home-title{
+
+  border-bottom: 1px solid $grey-color-light;
+
+  h2{
+    font-size: 20px;
+  }
+
+}
 
 

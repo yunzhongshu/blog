@@ -1,23 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title></title>
-    <description></description>
+    <title>一朵云的私人花园</title>
+    <description>一朵云的个人技术博客。
+</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 03 Nov 2016 20:27:39 +0800</pubDate>
-    <lastBuildDate>Thu, 03 Nov 2016 20:27:39 +0800</lastBuildDate>
+    <pubDate>Thu, 03 Nov 2016 22:14:57 +0800</pubDate>
+    <lastBuildDate>Thu, 03 Nov 2016 22:14:57 +0800</lastBuildDate>
     <generator>Jekyll v3.3.0</generator>
     
       <item>
         <title>nginx的网站跨域设置</title>
-        <description>&lt;p&gt;web应用通常会碰到跨域的问题，特别是在将字体文件放在另一个域名下(cdn缓存)的时候会出现无法访问的问题，浏览器会报如下错误警告：&lt;/p&gt;
+        <description>&lt;p&gt;　　本文适用于用nginx服务器来转发web请求的场景。&lt;br /&gt;
+　　web应用通常会碰到跨域请求的问题。一种情况是一个域名向另一个不同域名请求资源。 比如：我当前的域名是http://a.abc.com，我现在要去请求http://b.def.com下的资源，这就是一种跨域请求。&lt;br /&gt;
+　　另一种情况，在同一域名下也可能出现跨域请求。如：在顶级域名下请求二级域名的资源，http://www.abc.com 访问 http://cdn.abc.com的资源。&lt;br /&gt;
+　　以下就是第二种情况:&lt;br /&gt;
+　　我们的资源文件是放在主站域名的二级域名下:cdn.xxx.com，其中包括字体文件，当主站使用了字体文件就会向cdn.xxx.com发送请求，这就形成了跨域，浏览器会报如下错误警告：&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Font from origin 'http://cdn.xxxx.com' has been blocked from loading by Cross-Origin Resource   Sharing policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'http://www.xxxx.com' is therefore not allowed access.
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;意思是说 http://www.xxxx.com 不被 http://cdn.xxxx.com 服务跨域允许,需要在 nginx 的 cdn.xxxx.com服务的配置中加上跨域允许的配置：&lt;/p&gt;
+&lt;p&gt;说是 http://www.xxxx.com 不被 http://cdn.xxxx.com 服务跨域允许。我们的请求都是通过nginx来进行转发的, 因此可以在 nginx 的 cdn.xxxx.com 服务的配置中加上跨域允许的配置：&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;add_header Access-Control-Allow-Origin http://www.xxxx.com;
 add_header Access-Control-Allow-Headers Origin,X-Requested-With,Content-    Type,Accept;
@@ -26,7 +31,21 @@ add_header Access-Control-Allow-Credentials true;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;重启nginx就能解决这个问题。&lt;/p&gt;
+&lt;p&gt;　　重启nginx就能解决这个问题。
+　　以上配置是在请求的返回response的header中添加了&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Access-Control-Allow-Origin http://www.xxxx.com;
+
+允许该域名被访问。 也可以用
+
+Access-Control-Allow-Origin *;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;　　允许所有域名访问该资源。 &lt;br /&gt;
+　　另外附上所有跨域访问的条件图：
+&lt;img src=&quot;http://images.cnitblog.com/blog/451114/201310/16103043-5beb9c6503144f86b41569805be88eec.png&quot; /&gt;&lt;/p&gt;
+
 </description>
         <pubDate>Sun, 30 Oct 2016 00:00:00 +0800</pubDate>
         <link>http://localhost:4000/2016/10/30/nginx%E7%9A%84%E7%BD%91%E7%AB%99%E8%B7%A8%E5%9F%9F%E8%AE%BE%E7%BD%AE.html</link>
