@@ -1,16 +1,21 @@
-<div class="page-header container-fluid">
+
+<nav class="navbar navbar-inverse page-nav" role="navigation">
     <div class="container">
-        <h1>最美的景 <small>一朵云的技术博客</small></h1>
-        <nav class="page-nav">
-            <ul class="menu-list">
-                <li>
+        <div class=" navbar-header col-md-6">
+            <a href="#">
+                <h1 class="navbar-brand">最美的景 <small>一朵云的技术博客</small></h1>
+            </a>
+
+        </div>
+        <div class="collapse navbar-collapse col-md-6">
+            <ul class="nav navbar-nav">
+                <li title="{{page.url}}" class="{% if page.url == '/index.html' or page.url == '/' %} active {% endif %}" >
                     <a href="{{site.baseurl}}/index.html">Home</a>
                 </li>
-                <li>
+                <li class="{% if page.url == '/about.html' %} active {% endif %}">
                     <a href="{{site.baseurl}}/about.html">About</a>
                 </li>
             </ul>
-        </nav>
+        </div>
     </div>
-
-</div>
+</nav>
