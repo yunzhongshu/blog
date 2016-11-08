@@ -12,3 +12,8 @@ github_username:  yunzhongshu
 timezone: Asia/Shanghai
 sass:
     style: compressed
+
+
+markdown: redcarpet
+redcarpet:
+  extensions: []
