@@ -9,7 +9,8 @@ title: 最美的景
     {% for post in site.posts %}
     　　<li>
             <time> {{ post.date | date: "%Y年%m月%d日" }} » </time>
-            <a class="post-link" href="{{ post.url }}">{{ post.title }}</a>
+            <a class="post-link" href="{% if site.domain %}{{site.domain}}{% endif %}{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            <span class="post-meta">浏览数:<span data-hk-page="{% if site.domain %}{{site.domain}}{% endif %}{{ post.url | prepend: site.baseurl }}"></span></span>
         </li>
     {% endfor %}
 </ul>
