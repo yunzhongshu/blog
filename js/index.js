@@ -6,6 +6,8 @@ var indexPage = (function($){
     $(function(){
 
 
+        $('pre').addClass('prettyprint');
+        prettyPrint();
 
 
     });
