@@ -17,4 +17,4 @@ sass:
 
 markdown: redcarpet
 redcarpet:
-  extensions: []
+  extensions: ["tables"]

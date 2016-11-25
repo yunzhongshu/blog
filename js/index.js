@@ -9,6 +9,9 @@ var indexPage = (function($){
         $('pre').addClass('prettyprint');
         prettyPrint();
 
+        $('table').each(function(){
+           $(this).addClass('table');
+        });
 
     });
 
