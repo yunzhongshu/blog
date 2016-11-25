@@ -65,7 +65,7 @@ tags: javascript 3d
 |time_anim|integer&#124;boolean|2000|全景图自动旋转前等待的时间.设置为false使他不自动选转|
 |anim_speed|string|'2rpm'|自动旋转速度. radians/degrees/revolutions per second/minute .可选值:-rpm revolutions per minute <br>rps revolutions per second<br>dpm degrees per minute<br>dps degrees per second<br>radians per minute<br>radians per second|
 |anim_lat|double|default_lat|绕着某个维度自动旋转|
-|navbar|boolean|array||是否使用导航栏,并且可以选择某些按钮显示，甚至自定义按钮.下面有例子|
+|navbar|boolean&#124;array||是否使用导航栏,并且可以选择某些按钮显示，甚至自定义按钮.下面有例子|
 |lang|Object|见下面|navbar上的按钮文本提示定义|
 |loading_img|string|null|视图中间加载圆形区域的图片地址|
 |loading_txt|string|'Loading...'|视图中间加载圆形区域的文本显示，只有在loading_img没有提供的情况下才会显示|
@@ -75,6 +75,28 @@ tags: javascript 3d
 |gyroscope|boolean|false|当设备支持的情况下使陀螺仪生效并且添加一个导航按钮|
 |size|object|null|全景图的大小.例如:{width: 500, height: 300}.默认根据container的大小来显示|
 |transition|object|见下面|场景切换时候的效果|
+>navbar属性设置例子:  
+    
+    new PhotoSphereViewer({
+      /* ..... */,
+      navbar: [
+        'autorotate',
+        'zoom',
+        'markers',
+        {
+          id: 'my-button',
+          title: 'Hello world',
+          className: 'custom-button',
+          content: 'Custom',
+          onClick: function() {
+           alert('Hello from custom button');
+          }
+        },
+        'caption',
+        'fullscreen'
+      }
+    );
+
 >lang的默认配置:  
 
     lang: {
