@@ -1,10 +1,10 @@
 ---
 layout: post
-title: logstash同步数据库数据
+title: logstash同步数据库数据到elasticsearch
 date: 2016-12-08 08:10
 author: 一朵云
 categories: linux
-tags: logstash 日志收集
+tags: logstash 日志收集 elasticsearch
 ---
 ###业务背景
 有一张记录用户通讯录信息的mysql表数据需要实时(相对实时)地同步到elasticsearch中。通讯录表的字段大概如下:  
